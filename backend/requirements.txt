@@ -1,0 +1,39 @@
+# KrishiMitra Backend Dependencies
+# Tested with Python 3.11+ and Python 3.14
+
+# Web Framework
+fastapi==0.136.1
+uvicorn[standard]==0.47.0
+starlette==1.0.0
+python-multipart==0.0.29
+
+# Database
+motor==3.7.1
+pymongo==4.17.0
+
+# Data Validation
+pydantic==2.13.4
+pydantic-settings==2.14.1
+annotated-types==0.7.0
+
+# Authentication
+python-jose[cryptography]==3.5.0
+bcrypt==5.0.0
+passlib==1.7.4
+
+# HTTP Client
+httpx==0.28.1
+
+# Rate Limiting
+slowapi==0.1.9
+
+# AI Providers
+google-genai==2.5.0          # New Google Gemini SDK (replaces google-generativeai)
+groq==1.2.0
+
+# Image Processing
+pillow==11.0.0
+
+# Utilities
+python-dotenv==1.2.2
+anyio==4.13.0
