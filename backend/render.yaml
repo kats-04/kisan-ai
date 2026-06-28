@@ -4,23 +4,35 @@ services:
     env: python
     region: singapore
     plan: free
+    rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
+      - key: APP_NAME
+        value: KrishiMitra API
       - key: ENVIRONMENT
         value: production
       - key: DEBUG
         value: false
       - key: MONGODB_URL
         sync: false
+      - key: MONGODB_DB_NAME
+        value: krishimitra
       - key: JWT_SECRET_KEY
         generateValue: true
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: JWT_ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 10080
       - key: GEMINI_API_KEY
         sync: false
       - key: GROQ_API_KEY
         sync: false
+      - key: DEFAULT_AI_PROVIDER
+        value: gemini
       - key: OPENWEATHER_API_KEY
         sync: false
       - key: ALLOWED_ORIGINS
         sync: false
     healthCheckPath: /health
+    autoDeploy: true
