@@ -39,7 +39,7 @@ A production-ready AI-powered agritech platform helping Indian farmers make smar
 
 ```bash
 cd backend
-cp .env.example .env
+cp ../.env.example .env
 # Edit .env with your API keys
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
@@ -49,8 +49,8 @@ uvicorn app.main:app --reload --port 8000
 
 ```bash
 cd frontend
-cp .env.local.example .env.local
-# Edit .env.local: NEXT_PUBLIC_API_URL=http://localhost:8000
+cp ../.env.example .env.local
+# Edit .env.local as needed, especially NEXT_PUBLIC_API_URL
 npm install
 npm run dev
 ```
