@@ -17,6 +17,7 @@ env/
 .env.local
 .env.production
 .env.*.local
+.env.example
 backend/.env
 frontend/.env.local
 
